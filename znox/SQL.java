@@ -130,7 +130,8 @@ public class SQL implements Cloneable {
         Statement statement = getConnection().createStatement();
 
         // Executa a linha
-        statement.executeQuery(query);
+        //statement.executeQuery(query); estava causando erro, alterado para \/, pelo projeto, estou usando.
+        statement.executeUpdate(query);
 
         return this;
     }
